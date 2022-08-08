@@ -2,7 +2,7 @@ defmodule ExssTest do
   use ExUnit.Case
   doctest Exss
 
-  test "greets the world" do
-    assert Exss.hello() == :world
+  test "simple ident" do
+    assert Exss.Parser.ident("blue") == {:ok, ["blue"], "", %{}, {1,0}, 4}
   end
 end
